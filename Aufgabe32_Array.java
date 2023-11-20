@@ -17,22 +17,28 @@ public class Aufgabe32_Array {
 			varArray[i] = count;
 			count++;
 			
-			//alternativ
-//			varArray[i] = ++i;
+			//alternativ aber schlecht weil direkt inhalt dcer laufvariable geschrieben wird beginnt bei null und endet bei 99
+//			varArray[i] = i;
 		}
 		
 		// Erneute Ausgabe von Array
 		for (int laufVarE : varArray) {
 			System.out.print("laufVarE: " + laufVarE + "\t");
 			System.out.print("VarArray: " + varArray + "\t");
-			System.out.print("VarArray[laufVarE]: " + varArray[laufVarE-1]); //Array beginnt bei Index 0 dort steht 1
+			
+			// schlechte Ausgabe
+			System.out.print("VarArray[laufVarE]: " + varArray[laufVarE -1]); //Array beginnt bei Index 0 dort steht 1
+			
 			System.out.println();
 		}
 		 // Alternative Arrayausgabe
 		for(int i = 0; i<varArray.length; i++) {
 			System.out.print("laufVarE: " + i + "\t");
 			System.out.print("VarArray: " + varArray + "\t");
+			
+		 // schlechte Ausgabe hier aber Ohne veränderung wirksam
 			System.out.print("VarArray[laufVarE]: " + varArray[i]); 
+			
 			System.out.println();
 		}
 		
